@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern-DuckExample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern-WeatherData", "ObserverPattern-WeatherData\ObserverPattern-WeatherData.csproj", "{4A27C7CB-B566-4991-A916-2276B249C82D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPatternBuiltIn", "ObserverPatternBuiltIn\ObserverPatternBuiltIn.csproj", "{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4A27C7CB-B566-4991-A916-2276B249C82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A27C7CB-B566-4991-A916-2276B249C82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A27C7CB-B566-4991-A916-2276B249C82D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

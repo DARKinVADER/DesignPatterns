@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern-DuckExample", "DuckExample\StrategyPattern-DuckExample.csproj", "{440FD19C-B0D7-4A23-BE34-EA44207A2C13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern-WeatherData", "ObserverPattern-WeatherData\ObserverPattern-WeatherData.csproj", "{4A27C7CB-B566-4991-A916-2276B249C82D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverPattern-WeatherData", "ObserverPattern-WeatherData\ObserverPattern-WeatherData.csproj", "{4A27C7CB-B566-4991-A916-2276B249C82D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPatternBuiltIn", "ObserverPatternBuiltIn\ObserverPatternBuiltIn.csproj", "{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverPatternBuiltIn", "ObserverPatternBuiltIn\ObserverPatternBuiltIn.csproj", "{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern", "DecoratorPattern\DecoratorPattern.csproj", "{33389911-438C-407F-B2DF-6AFA86F56389}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64310455-C3AC-48CC-A860-CBBBD6D1DBB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33389911-438C-407F-B2DF-6AFA86F56389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33389911-438C-407F-B2DF-6AFA86F56389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33389911-438C-407F-B2DF-6AFA86F56389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33389911-438C-407F-B2DF-6AFA86F56389}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

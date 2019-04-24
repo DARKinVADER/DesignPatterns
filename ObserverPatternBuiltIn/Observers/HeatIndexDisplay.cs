@@ -28,7 +28,7 @@ namespace ObserverPatternBuiltIn
 
         public void OnNext(WeatherData value)
         {
-            float heatIndex = computeHeatIndex(value.Temperature, value.Humidity);
+            float heatIndex = ComputeHeatIndex(value.Temperature, value.Humidity);
 
             Console.WriteLine($"Heat index is {heatIndex}");
         }

@@ -14,7 +14,24 @@ namespace DecoratorPattern.Decorators
 
         public override double Cost()
         {
-            return beverage.Cost() + 0.15;
+            double condimentCost = 0;
+
+            switch (beverage.Size)
+            {
+                case SizeType.tall:
+                    condimentCost = 0.1;
+                    break;
+                case SizeType.grande:
+                    condimentCost = 0.15;
+                    break;
+                case SizeType.venti:
+                    condimentCost = 0.20;
+                    break;
+                default:
+                    throw new IndexOutOfRangeException($"Unknown Beverage size {beverage.Size}");
+            }
+
+            return beverage.Cost() + condimentCost;
         }
 
         public override string GetDescription()

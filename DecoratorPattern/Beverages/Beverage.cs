@@ -8,11 +8,16 @@ namespace DecoratorPattern
     {
         protected string description = "Unknown Beverage";
 
+        public SizeType Size { get; set; }
+
+        public enum SizeType { tall, grande, venti };
+
         public virtual string GetDescription()
         {
             return description;
         }
 
-        public abstract double Cost();
+        public abstract double Cost();      
+
     }
 }

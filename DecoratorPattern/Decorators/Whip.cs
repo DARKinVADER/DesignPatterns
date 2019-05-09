@@ -6,7 +6,7 @@ namespace DecoratorPattern.Decorators
 {
     public class Whip : CondimentDecorator
     {
-        private Beverage beverage;
+        private readonly Beverage beverage;
 
         public Whip(Beverage beverage)
         {

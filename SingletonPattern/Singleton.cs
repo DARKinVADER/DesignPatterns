@@ -7,7 +7,7 @@ namespace SingletonPattern
     public class Singleton
     {
         private static Singleton uniqueInstance;
-        private static readonly Object singletonLock = new Object(); 
+        private static readonly Object singletonLock = new Object();
         public int Counter { get; set; }
 
         private Singleton()
@@ -17,11 +17,14 @@ namespace SingletonPattern
 
         public static Singleton GetInstance()
         {
-            lock (singletonLock)
+            if (uniqueInstance == null)
             {
-                if (uniqueInstance == null)
+                lock (singletonLock)
                 {
-                    uniqueInstance = new Singleton();
+                    if (uniqueInstance == null)
+                    {
+                        uniqueInstance = new Singleton();
+                    }
                 }
             }
             return uniqueInstance;

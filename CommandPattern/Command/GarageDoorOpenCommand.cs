@@ -7,7 +7,7 @@ namespace CommandPattern.Command
 {
     public class GarageDoorOpenCommand : ICommand
     {
-        GarageDoor garageDoor;
+        readonly GarageDoor garageDoor;
 
         public GarageDoorOpenCommand(GarageDoor garageDoor)
         {

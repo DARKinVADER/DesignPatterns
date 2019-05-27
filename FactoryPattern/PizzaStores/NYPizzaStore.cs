@@ -1,21 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FactoryPattern.Ingerdient;
+using FactoryPattern.Pizza;
 
 namespace FactoryPattern.PizzaStores
 {
     public class NYPizzaStore : PizzaStore
     {
-        protected override Pizza CreatePizza(string type)
+        protected override PizzaBase CreatePizza(string type)
         {
-            if (type.Equals("cheese"))
+            PizzaBase pizza = null;
+            NYPizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
+
+            switch (type)
             {
-                return new NYStyleCheesePizza();
+                case "cheese":
+                    pizza = new CheesePizza(ingredientFactory)
+                    {
+                        Name = "NY Style Cheese Pizza"
+                    };
+                    break;
+
+                case "clam":
+                    pizza = new ClamPizza(ingredientFactory)
+                    {
+                        Name = "NY Style Clam Pizza"
+                    };
+                    break;
+
+                default:
+                    return null;
             }
-            else
-            {
-                return null;
-            }
+
+            return pizza;
         }
     }
 }

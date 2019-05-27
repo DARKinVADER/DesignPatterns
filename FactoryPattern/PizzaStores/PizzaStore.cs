@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FactoryPattern.Pizza;
 
 namespace FactoryPattern.PizzaStores
 {
@@ -13,11 +14,11 @@ namespace FactoryPattern.PizzaStores
         //    this.simplePizzaFactory = simplePizzaFactory;
         //}
 
-        public Pizza OrderPizza(string type)
+        public PizzaBase OrderPizza(string type)
         {
-            Pizza pizza = CreatePizza(type);
+            PizzaBase pizza = CreatePizza(type);
 
-            pizza.prepare();
+            pizza.Prepare();
             pizza.bake();
             pizza.cut();
             pizza.box();
@@ -26,6 +27,6 @@ namespace FactoryPattern.PizzaStores
 
         }
 
-        protected abstract Pizza CreatePizza(string type);
+        protected abstract PizzaBase CreatePizza(string type);
     }
 }

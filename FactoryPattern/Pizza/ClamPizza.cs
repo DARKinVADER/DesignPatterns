@@ -1,23 +1,23 @@
-﻿using FactoryPattern.Ingerdient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using FactoryPattern.Ingerdient;
+using FactoryPattern.Pizza;
 
 namespace FactoryPattern.Pizza
 {
-    public class ClamPizza : Pizza
+    public class ClamPizza : PizzaBase
     {
-        private IPizzaIngredientFactory pizzaIngredientFactory;
+        private readonly IPizzaIngredientFactory pizzaIngredientFactory;
 
         public ClamPizza(IPizzaIngredientFactory pizzaIngredientFactory)
         {
-            this.pizzaIngredientFactory = pizzaIngredientFactory;
+            this.pizzaIngredientFactory = pizzaIngredientFactory ?? throw new ArgumentNullException(nameof(pizzaIngredientFactory));
         }
 
-        public override void prepare()
+        public override void Prepare()
         {
             Console.WriteLine($"Preparing {Name}");
-
             Dough = pizzaIngredientFactory.CreateDough();
             Sauce = pizzaIngredientFactory.CreateSauce();
             Cheese = pizzaIngredientFactory.CreateCheese();

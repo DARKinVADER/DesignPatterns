@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FactoryPattern.Pizza
 {
-    public abstract class Pizza
+    public abstract class PizzaBase
     {
         public string Name { get; set; }
         public Dough Dough { get; set; }
@@ -16,7 +16,18 @@ namespace FactoryPattern.Pizza
         public Clams Clam { get; set; }
         protected List<string> toppings = new List<string>();
 
-        public abstract void prepare();
+        //public virtual void prepare()
+        //{
+        //    Console.WriteLine($"Preparing {Name}");
+        //    Console.WriteLine("Tossing dough...");
+        //    Console.WriteLine("Adding sauce...");
+        //    Console.WriteLine("Adding toppings: ");
+        //    foreach (string topping in toppings)
+        //    {
+        //        Console.WriteLine($" {topping}");
+        //    }
+        //}
+        public abstract void Prepare();
         public virtual void bake()
         {
             Console.WriteLine($"Bake for 25 minutes at 350");
